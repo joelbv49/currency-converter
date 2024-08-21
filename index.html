@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>currency converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class = "h-screen bg-[#f4e4ba] flex justify-center items-center">
+    <div class="w-96 bg-white p-8 rounded-2xl shadow-md">
+        <!-- form -->
+        <form class="space-y-6">
+            <!-- title -->
+            <div class="title">
+                <h1 class = "font-bold text-2xl">Currency Converter</h1>
+            </div>
+            <!-- input -->
+            <div>
+                <input class="outline-none border border-gray-500 rounded-md py-2 px-2 w-full placeholder:transition placeholder:ease-in-out focus:placeholder:-translate-y-3 focus:placeholder:text-xs" type="text"  placeholder="Enter Amount" value="">
+                <p class="error-msg text-xs text-center text-red-600 font-semibold animate-pulse hidden">Error Enter positive value....</p>
+            </div>
+
+            <!-- select container -->
+            <div class="select-container flex justify-between items-center cursor-auto">
+
+                <!-- from -->
+                <div class="dropdown w-[6.5rem]">
+                    <p class="font-semibold">From</p>
+                    <div class="From flex h-10 border border-gray-400 rounded-md px-1  ">
+                        <img src="https://flagsapi.com/US/shiny/64.png">
+                        <select class="text-sm outline-none cursor-pointer " name="From" >
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Exchange icon -->
+                <i  class="fa-solid fa-arrow-right-arrow-left mt-7 pr-3"></i>
+
+                <!-- To -->
+                <div class="dropdown w-[6.5rem]">
+                    <p class="font-semibold">To</p>
+                    <div class="to flex h-10 border border-gray-400 rounded-md px-1">
+                        <img src="https://flagsapi.com/IN/shiny/64.png" >
+                        <select class="text-sm outline-none cursor-pointer" name ="to" >
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- msg -->
+            <div class="value">
+                <h3 class="font-semibold"></h3>
+            </div>
+
+            <!-- button -->
+            <button class="text-white bg-[#af4d98] px-2 py-3 w-3/4 rounded-md mx-10 hover:bg-[#ce55b2] font-bold ">Get Exchange Rate</button>
+        </form>
+        
+    </div>
+
+
+
+
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
